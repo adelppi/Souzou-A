@@ -12,12 +12,12 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
 
 if isinstance(data, list):
     selected_data = random.choice(data)
-    moji_value = selected_data.get('moji', '')
-    imi_value = selected_data.get('imi', '')
+    english_value = selected_data.get('english', '')
+    japanese_value = selected_data.get('japanese', '')
 else:
-    moji_value = data.get('moji', '')
-    imi_value = data.get('imi', '')
+    english_value = data.get('english', '')
+    japanese_value = data.get('japanese', '')
 
-quiz_sentence = f'「{moji_value}」の意味は\n「{imi_value}」である.\n'
+quiz_sentence = f'「{english_value}」の意味は「{japanese_value}」である.\n'
 
 print(quiz_sentence)
